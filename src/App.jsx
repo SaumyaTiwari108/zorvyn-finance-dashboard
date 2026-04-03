@@ -69,7 +69,7 @@ export default function App() {
             <div className="flex-1">
               <div className="flex justify-between items-center mb-1">
                 <p className="text-sm text-gray-500 font-medium">Total Income</p>
-                <span className="text-[10px] font-bold bg-green-50 text-green-600 px-2 py-0.5 rounded-full border border-green-100 opacity-60 group-hover:opacity-100 transition-opacity">VIEW CHART</span>
+                <span className="text-[10px] font-bold bg-green-50 text-green-600 px-2 py-0.5 rounded-full border border-green-300 opacity-60 group-hover:opacity-100 transition-opacity">VIEW CHART</span>
               </div>
               <p className="text-3xl font-extrabold text-green-600">${totals.income.toLocaleString()}</p>
             </div>
@@ -98,11 +98,11 @@ export default function App() {
                 </div>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 w-full md:w-auto">
-                <div className="bg-white px-5 py-3 rounded-xl shadow-sm border border-purple-100 flex-1">
+                <div className="bg-white px-5 py-3 rounded-xl shadow-sm border border-purple-300 flex-1">
                     <p className="text-xs text-gray-500 font-semibold mb-1 uppercase">Savings Rate</p>
                     <p className="text-xl font-extrabold text-brand-purple">{savingsRate}%</p>
                 </div>
-                <div className="bg-white px-5 py-3 rounded-xl shadow-sm border border-purple-100 flex-1">
+                <div className="bg-white px-5 py-3 rounded-xl shadow-sm border border-purple-300 flex-1">
                     <p className="text-xs text-gray-500 font-semibold mb-1 uppercase">Top Expense</p>
                     <p className="text-xl font-extrabold text-gray-900 capitalize">{biggestExpense ? biggestExpense.category : 'N/A'}</p>
                 </div>
@@ -174,7 +174,7 @@ export default function App() {
           <div className="overflow-x-auto">
             <table className="w-full text-left">
               <thead>
-                <tr className="text-xs text-gray-400 border-b border-gray-100 uppercase tracking-widest font-semibold">
+                <tr className="text-xs text-gray-600 border-b border-gray-400 uppercase tracking-widest font-semibold">
                   <th className="pb-4 px-5">Date</th>
                   <th className="pb-4 px-5">Description</th>
                   <th className="pb-4 px-5 text-right">Amount</th>
@@ -184,7 +184,7 @@ export default function App() {
               <tbody>
                 {filteredTransactions.map((tx) => (
                   <tr key={tx.id} className="border-b border-gray-50 last:border-0 hover:bg-gray-50/50 transition">
-                    <td className="py-5 px-5 text-sm text-gray-500 whitespace-nowrap">{tx.date}</td>
+                    <td className="py-5 px-5 text-sm text-gray-990 whitespace-nowrap">{tx.date}</td>
                     <td className="py-5 px-5">
                       <div className="font-semibold text-gray-950">{tx.description}</div>
                       <div className="flex items-center gap-2 mt-1.5 text-xs text-gray-500 font-medium">
@@ -192,7 +192,7 @@ export default function App() {
                         {tx.category}
                       </div>
                     </td>
-                    <td className={`py-5 px-5 text-right font-extrabold whitespace-nowrap ${tx.type === 'income' ? 'text-green-500' : 'text-red-500'}`}>
+                    <td className={`py-5 px-5 text-right font-bold whitespace-nowrap ${tx.type === 'income' ? 'text-green-500' : 'text-red-500'}`}>
                       {tx.type === 'income' ? '+' : '-'}${tx.amount.toLocaleString()}
                     </td>
                     {role === 'Admin' && (
