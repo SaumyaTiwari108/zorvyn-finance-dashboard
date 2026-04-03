@@ -30,7 +30,7 @@ export default function App() {
         <div className="flex items-center gap-6">
           <img src={zorvynLogo} alt="Zorvyn Logo" className="h-10 md:h-12" />
           <div className="h-7 w-[1px] bg-white/20 hidden md:block"></div>
-          <h1 className="text-2xl font-semibold text-white tracking-tight">Finance Overview</h1>
+          <h1 className="text-2xl font-semibold text-white tracking-tight">Finance Dashboard</h1>
         </div>
 
         <div className="flex items-center gap-6">
