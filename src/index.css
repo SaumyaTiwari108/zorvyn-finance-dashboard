@@ -1,0 +1,4 @@
+@import "tailwindcss";
+@theme {
+  --color-brand-purple: #0f1021; /* This is the deep dark purple from the Zorvyn portal */
+}
